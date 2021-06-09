@@ -4,9 +4,9 @@ class Home extends Component{
     constructor(props){
         super();
         this.state = {
-            age: props.initailAge,
+            age: props.initialAge,
             status: 0,
-            linkName: "Changed Link"
+            linkName: props.initialLinkName
         }
     }
 
@@ -16,6 +16,10 @@ class Home extends Component{
 
     onMakeOlder(){
         this.setState({age: this.state.age + 3});
+    }
+
+    onLinkInput(event){
+        this.setState({linkName: event.target.value});
     }
 
     render(){
@@ -28,6 +32,7 @@ class Home extends Component{
                 <hr />
                 <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
                 <hr />
+                <input type="text" value={this.state.linkName} onChange={(event) => this.onLinkInput(event)}/>
                 <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Link</button>
             </div>
         );
