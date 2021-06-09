@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const Header = (props) => {
         return(
@@ -6,7 +6,7 @@ const Header = (props) => {
                 <div className="container">
                     <div className="navbar-header">
                         <ul className="nav navbar-nav">
-                            <li><a href={props.homeLink}>Home</a></li>
+                            <li><a href={props.homeLink}>{props.homeLink}</a></li>
                         </ul>
                     </div>
                 </div>
