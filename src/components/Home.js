@@ -20,6 +20,8 @@ class Home extends Component{
                 <p>I am {this.props.name} and my age is {this.state.age} years old.</p>
                 <hr />
                 <button onClick={ () => this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
+                <hr />
+                <button onClick={this.props.greet} className="btn btn-primary">Greet</button>
             </div>
         );
     }
